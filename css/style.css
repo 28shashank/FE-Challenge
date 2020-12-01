@@ -1,0 +1,327 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+html{width:100vw;height:100vh;overflow:hidden;}
+body{
+	-webkit-user-select:none;
+	width:100vw;
+	height:100vh;
+	font-family:'Open Sans';
+	font-size:16px;
+	color:red;
+	letter-spacing:1px;
+	overflow:auto;
+}
+.header {
+    height: 444px;
+    background-color: #004A80;
+}
+.bottom-section {
+	height: 454px;
+    background-color: #004A80;
+}
+.bottom-section .search-container {
+    padding: 112px 0;
+}
+.header.result{height: auto;}
+.main-container {
+	background-color: #E6E6E6; /* For browsers that do not support gradients */
+	background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+}
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.logo img {
+	width: 173px;
+	height: 25px;
+	cursor: pointer;
+}
+.search-path {
+	margin-right: 15px;
+}
+.search-path img {
+	width: 19px;
+	height: 20px;
+	cursor: pointer;
+}
+.user img {
+	width: 20px;
+	height: 21px;
+	cursor: pointer;
+}
+.search-container {
+	padding: 20px 0;
+}
+.result-container {
+	padding: 20px 0;
+	background: #F8F8F8;
+}
+.search-info {
+    text-align: center;
+}
+.result-info {
+	font-size: 24px;
+	color: #000000;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 32px;
+	margin-bottom: 2rem;
+}
+.result-container h1{
+	font-size: 52px;
+	color: #004A80;
+	letter-spacing: 0;
+	text-align: center;
+	margin: 2rem 0;
+}
+.search-info span:first-child{
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 24px;
+	color: #F6BC25;
+	letter-spacing: 0;
+	text-align: center;
+}
+.search-info span:last-child{
+	font-size: 24px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 29px;
+}
+h1 {
+	font-family: 'Open Sans';
+	font-size: 52px;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	text-align: center;
+}
+.form-inline{
+	margin: 1rem 0;
+}
+.form-inline input {height: calc(2.5em + .5rem + 3px);}
+.search-msg {
+	font-size: 16px;
+	color: #F6BC25;
+	letter-spacing: 0;
+}
+.search-msg img {
+    width: 13px;
+    height: 17px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+.btn-warning {
+	background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+	box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+	border-radius: 6px;
+	border-radius: 6px;
+	font-family: 'Open Sans';
+	font-size: 24px;
+	font-weight: bold;
+	color: #004A80;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.lookup-title {
+	font-size: 52px;
+	font-weight: bold;
+	color: #004A80;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 70px;
+	text-align: center;
+	margin: 40px 0;
+}
+.lookup-msg{
+	font-family: 'Open Sans';
+	font-size: 22px;
+	color: #4A4A4A;
+	letter-spacing: 0;
+	line-height: 30px;
+}
+
+.lookup-list {
+    position: static;
+    display: block;
+    max-width: 95%;
+    padding: 0;
+    margin: 2rem 0;
+    overflow: hidden;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.lookup-list .title {
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 20px;
+	color: #004A80;
+	letter-spacing: 0;
+	margin-bottom: 0.45rem;
+}
+.lookup-list span.circle {
+    background: #004A80;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #F6BC25;
+    font-size: 22px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 55px;
+    margin-right: 5px;
+    text-align: center;
+    width: 56px;
+    vertical-align: top;
+    margin-top: 15px;
+}
+.lookup-list .info-container{
+	display: inline-block;
+    width: 85%;
+}
+.lookup-list .info {
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 23px;
+}
+.marl37{margin-left: -37px;}
+
+.card {
+	background: #FFFFFF;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+	border-radius: 30px;
+	border-radius: 30px;
+	padding: 30px;
+}
+
+.card .card-list {
+    position: static;
+    display: block;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.card-list .title {
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 32px;
+	color: #004A80;
+	letter-spacing: 0;
+	margin-bottom: 0.45rem;
+}
+.card-list span.circle {
+    background: #004A80;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #F6BC25;
+    font-size: 22px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 90px;
+    margin-right: 5px;
+    text-align: center;
+    width: 90px;
+    vertical-align: top;
+    margin-top: 15px;
+}
+.card-list .info-container{
+	display: inline-block;
+    width: 90%;
+    padding-left: 15px;
+}
+.card-list .info {
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 23px;
+}
+.card .user img {
+    width: 40px;
+    height: 41px;
+    cursor: pointer;
+}
+.desc-title{
+	font-size: 22px;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	color: #004A80;
+	letter-spacing: 0;
+}
+.desc {
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 26px;
+	margin-bottom: 1rem;
+}
+.phone p {
+	color: #004A80;
+	margin: 0;
+}
+.relatives p {margin: 0;}
+.footer {
+	background: #FFFFFF;
+	font-size: 15px;
+	color: #999999;
+	letter-spacing: 0;
+	line-height: 20px;
+}
+
+.footer .container-fluid {width: 90%; padding: 20px;}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.w80{width: 80%;}
+.links {
+	font-size: 14px;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	color: #004A80;
+	letter-spacing: 0;
+}
+.links a {color: #004A80;}
+.btn-warning:hover {
+    background-image: linear-gradient(225deg, #F2DA56 0%, #F2DA56 100%);
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+}
+
+
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+}
