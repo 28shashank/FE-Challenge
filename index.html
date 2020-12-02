@@ -27,8 +27,8 @@
 			    	<div class="search-container">
 			    		<h1>Search Any Email Address</h1>
 			    		<p class="search-info"><span>Start Here - </span><span>Look up the owner's name, photos and online profiles. See what you find!</span></p>
-			    		<form name="myForm" class="form-inline" action="search-result.html" onsubmit="return validateForm()">
-					      <input class="form-control col mr-sm-2" name="serachByEmail" type="search" placeholder="EMAIL" aria-label="Search" id="serachText" required />
+			    		<form name="myForm" class="form-inline" action="search-result.html" method="get" onsubmit="return validateForm()" required>
+					      <input class="form-control col mr-sm-2" name="email" type="search" placeholder="EMAIL" aria-label="Search" id="serachText" />
 					      <button class="btn btn-warning col col-lg-2" type="submit" onclick="parsevalues();">GO!</button>
 					    </form>
 					    <p class="search-msg"><span><img src="images/lock@2x.png" alt="" /></span><span>Enter Any Email Address. They won't be notified.</span></p>
@@ -43,7 +43,7 @@
 			    <div class="col-12">
 			    	<h2 class="lookup-title">Reverse Email Lookup</h2>
 			    	<p class="lookup-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			    	<div class="container">
+			    	<div class="rev-lookup-list container">
 					  <div class="row">
 					    <div class="col-sm">
 					      <ul class="marl37">
@@ -131,20 +131,40 @@
 		}
 
 		function validateForm() {
-		  var x = document.forms["myForm"]["serachByEmail"].value;
+		  var x = document.forms["myForm"]["email"].value;
 
 		  if (x == "") {
-		    alert("Email must be filled out");
+		    alert("Email must be filled out, search again.");
 		    return false;
 		  }
 		  else if (x == "jonsmith@example.com" || x == "janesmith@example.com" || x == "doesmith@example.com") {
 		  	return true;
 		  }
 		  else {
-		  	alert("Correct Email must be filled out");
+		  	alert("Correct Email must be filled out, search again.");
 		  	return false;
 		  }
 		}
+
+		function setCaretPosition(ctrl, pos) {
+		  // Modern browsers
+		  if (ctrl.setSelectionRange) {
+		    ctrl.focus();
+		    ctrl.setSelectionRange(pos, pos);
+		  
+		  // IE8 and below
+		  } else if (ctrl.createTextRange) {
+		    var range = ctrl.createTextRange();
+		    range.collapse(true);
+		    range.moveEnd('character', pos);
+		    range.moveStart('character', pos);
+		    range.select();
+		  }
+		}
+
+		// Set the cursor position of the "#test-input" element to the end when the page loads
+		var input = document.getElementById('serachText');
+		setCaretPosition(input, input.value.length);
 
 	</script>
 

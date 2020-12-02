@@ -186,7 +186,7 @@ h1 {
 }
 .lookup-list .info-container{
 	display: inline-block;
-    width: 85%;
+    width: 83%;
 }
 .lookup-list .info {
 	font-size: 18px;
@@ -209,7 +209,7 @@ h1 {
     display: block;
     max-width: 100%;
     padding: 0;
-    margin: 0 0 2rem 0;
+    margin: 0 0 0.5rem 0;
     overflow: hidden;
     line-height: 1.4;
     text-align: left;
@@ -249,6 +249,10 @@ h1 {
 	color: #000000;
 	letter-spacing: 0;
 	line-height: 23px;
+}
+.card-summary {
+	width: 88%;
+    margin-left: 10%;
 }
 .card .user img {
     width: 40px;
@@ -305,23 +309,183 @@ h1 {
 }
 
 
+@media (max-width: 575px) {
+	.header {height: 480px;}
+	h1, .result-container h1 {font-size: 38px;}
+	.search-info span:first-child, .search-info span:last-child {font-size: 18px;}
+	.form-inline {display: block;}
+	.form-inline input {margin-bottom: 0.5rem;}
+	.lookup-title {font-size: 38px; line-height: 48px;margin: 30px 0;}
+	.lookup-msg{font-size: 18px; line-height: 28px;}
+	.lookup-list {margin: 0.5rem 0;max-width: 100%;}
+	.marl37 {margin-left: 0px;}
+	.rev-lookup-list.container {padding-left: 0;}
+	.lookup-list .info {font-size: 16px; line-height: 24px;margin-bottom: 0.5rem;}
+	.lookup-list .info-container {width: 75%;}
+	.bottom-section {height: 390px;}
+	.bottom-section .search-container {padding: 28px 0;}
+	.footer-container {display: block;}
+	.footer .container-fluid {width: 100%; padding: 20px 15px;}
+	.links {display: block; margin-top: 1rem;}
+	.result-info{font-size: 18px; line-height: 28px;}
+	.card {padding: 20px 0;}
+	.card .card-list {margin: 0 0 0.25rem 0;}
+	.card-list span.circle {display: none;}
+	.card-list .info-container {padding-left: 10px;}
+	.card-list .info {font-size: 16px;}
+	.card-summary {width: 94%; margin-left: 10px;}
+	.card-summary .col-sm {padding-left: 2px; padding-right: 5px;}
+	.desc-title {font-size: 20px;}
+	.desc {font-size: 16px; line-height: 24px; margin-bottom: 0.5rem;}
+}
+
 
 /*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) { 
-
+@media (min-width: 575px) and (max-width:767px) { 
+	.header {height: 480px;}
+	h1, .result-container h1 {font-size: 38px;}
+	.search-info span:first-child, .search-info span:last-child {font-size: 18px;}
+	.form-inline {display: block;}
+	.form-inline input {margin-bottom: 0.5rem; width: 100% !important;}
+	.lookup-title {font-size: 38px; line-height: 48px;margin: 30px 0;}
+	.lookup-msg{font-size: 18px; line-height: 28px;}
+	.lookup-list {margin: 0.5rem 0;max-width: 100%;}
+	.marl37 {margin-left: 0px;}
+	.rev-lookup-list.container {padding-left: 0;}
+	.lookup-list .info {font-size: 16px; line-height: 24px;margin-bottom: 0.5rem;}
+	.lookup-list .info-container {width: 71%;}
+	.bottom-section {height: 390px;}
+	.bottom-section .search-container {padding: 28px 0;}
+	.footer-container {display: block;}
+	.footer .container-fluid {width: 100%; padding: 20px 15px;}
+	.links {display: block; margin-top: 1rem;}
+	.result-info{font-size: 18px; line-height: 28px;}
+	.card {padding: 20px 0;}
+	.card .card-list {margin: 0 0 0.25rem 0;}
+	.card-list span.circle {display: none;}
+	.card-list .info-container {padding-left: 10px;}
+	.card-list .info {font-size: 16px;}
+	.card-summary {width: 94%; margin-left: 10px;}
+	.card-summary .col-sm {padding-left: 2px; padding-right: 5px;}
+	.desc-title {font-size: 20px;}
+	.desc {font-size: 16px; line-height: 24px; margin-bottom: 0.5rem;}
 }
 
 /*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-
+@media (min-width: 768px) and (max-width:991px) {
+	h1, .lookup-title {font-size: 48px;}
+	.search-info span:first-child, .search-info span:last-child {font-size: 20px; line-height: 25px;}
+	.search-msg {font-size: 16px;}
+	.lookup-msg {font-size: 20px; line-height: 28px;}
+	.lookup-list {max-width: 100%;}
+	.lookup-list span.circle {
+		margin-top: 3px;
+	}
+	.lookup-list .info-container {
+		width: 79%;
+	}
+	.lookup-list .info {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.marl37 {margin-left: -14px;}
+	.result-container h1 {
+	    font-size: 48px;
+	}
+	.result-info {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.card-list .info-container {width: 84%;}
+	.card-list .info {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.desc-title {font-size: 20px;}
+	.desc {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.card-summary {margin-left: 16%;}
+	.col-lg-2 {
+	    -ms-flex: 0 0 16.666667%;
+	    flex: 0 0 16.666667%;
+	    max-width: 16.666667%;
+	}
 }
 
 /*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-
+@media (min-width: 992px) and (max-width:1199px) {
+	h1, .lookup-title {font-size: 48px;}
+	.search-info span:first-child, .search-info span:last-child {font-size: 20px; line-height: 25px;}
+	.search-msg {font-size: 16px;}
+	.lookup-msg {font-size: 20px; line-height: 28px;}
+	.lookup-list {max-width: 100%;}
+	.lookup-list span.circle {
+		margin-top: 3px;
+	}
+	.lookup-list .info-container {
+		width: 79%;
+	}
+	.lookup-list .info {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.marl37 {margin-left: -14px;}
+	.result-container h1 {
+	    font-size: 48px;
+	}
+	.result-info {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.card-list .info-container {width: 84%;}
+	.card-list .info {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.desc-title {font-size: 20px;}
+	.desc {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.card-summary {margin-left: 12%;}
+	.col-lg-2 {
+	    -ms-flex: 0 0 16.666667%;
+	    flex: 0 0 16.666667%;
+	    max-width: 16.666667%;
+	}
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
-
+	.lookup-msg {
+	    font-size: 22px;
+	    line-height: 30px;
+	}
+	.lookup-list .info {
+	    font-size: 18px;
+	    line-height: 23px;
+	}
+	.result-container h1 {font-size: 52px;}
+	.result-info {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	.card-summary {
+	    margin-left: 10%;
+	}
+	.card-list .info {
+	    font-size: 18px;
+	    line-height: 26px;
+	}
+	.desc-title {
+	    font-size: 22px;
+	}
+	.desc {
+	    font-size: 18px;
+	    line-height: 26px;
+	}
+	h1, .lookup-title {font-size: 52px;}
+	.search-info span:first-child, .search-info span:last-child {font-size: 24px; line-height: 29px;}
 }
