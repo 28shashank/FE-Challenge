@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Search Page</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet' />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="sass/main.css" />
 
 </head>
 <body>
 	<!-- container -->
-	
 	<div class="header">
 		<div class="container">
 			<div class="row">
@@ -28,7 +29,7 @@
 			    		<h1>Search Any Email Address</h1>
 			    		<p class="search-info"><span>Start Here - </span><span>Look up the owner's name, photos and online profiles. See what you find!</span></p>
 			    		<form name="myForm" class="form-inline" action="result.html" method="get" onsubmit="return validateForm()" required>
-					      <input class="form-control col mr-sm-2" name="email" type="search" placeholder="EMAIL" aria-label="Search" id="serachText" />
+					      <input class="form-control col mr-sm-2" name="email" type="search" placeholder="EMAIL" aria-label="Search" id="serachText" autofocus />
 					      <button class="btn btn-warning col col-lg-2" type="submit" onclick="parsevalues();">GO!</button>
 					    </form>
 					    <p class="search-msg"><span><img src="images/lock@2x.png" alt="" /></span><span>Enter Any Email Address. They won't be notified.</span></p>
@@ -117,56 +118,12 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- /container -->
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-	<script>
-		function parsevalues(){
-			var email = document.getElementById('serachText').value;
-			localStorage.setItem("textValue", email);
-			return false;
-		}
-
-		function validateForm() {
-		  var x = document.forms["myForm"]["email"].value;
-
-		  if (x == "") {
-		    alert("Email must be filled out, search again.");
-		    return false;
-		  }
-		  else if (x == "jonsmith@example.com" || x == "janesmith@example.com" || x == "doesmith@example.com") {
-		  	return true;
-		  }
-		  else {
-		  	alert("Correct Email must be filled out, search again.");
-		  	return false;
-		  }
-		}
-
-		function setCaretPosition(ctrl, pos) {
-		  // Modern browsers
-		  if (ctrl.setSelectionRange) {
-		    ctrl.focus();
-		    ctrl.setSelectionRange(pos, pos);
-		  
-		  // IE8 and below
-		  } else if (ctrl.createTextRange) {
-		    var range = ctrl.createTextRange();
-		    range.collapse(true);
-		    range.moveEnd('character', pos);
-		    range.moveStart('character', pos);
-		    range.select();
-		  }
-		}
-
-		// Set the cursor position of the "#test-input" element to the end when the page loads
-		var input = document.getElementById('serachText');
-		setCaretPosition(input, input.value.length);
-
-	</script>
+	<!-- script -->
+	<script src="js/search.js"></script>
+	<script src="js/form-validation.js"></script>
+	<!-- /script -->
 
 </body>
 </html>

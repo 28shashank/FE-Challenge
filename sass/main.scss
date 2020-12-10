@@ -1,9 +1,11 @@
+@import "mixin";
+@import "var";
+
 *{
 	padding:0;
 	margin:0;
 	box-sizing:border-box;
 }
-
 html{width:100vw;height:100vh;overflow:hidden;}
 body{
 	-webkit-user-select:none;
@@ -11,25 +13,25 @@ body{
 	height:100vh;
 	font-family:'Open Sans';
 	font-size:16px;
-	color:red;
+	color:$black;
 	letter-spacing:1px;
 	overflow:auto;
 }
 .header {
     height: 444px;
-    background-color: #004A80;
+    background-color: $blue;
 }
 .bottom-section {
 	height: 454px;
-    background-color: #004A80;
+    background-color: $blue;
 }
 .bottom-section .search-container {
     padding: 112px 0;
 }
 .header.result{height: auto;}
 .main-container {
-	background-color: #E6E6E6; /* For browsers that do not support gradients */
-	background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+	background-color: $bg-light-gray; /* For browsers that do not support gradients */
+	background-image: linear-gradient(0deg, $bg-light-gray 0%, #FFFFFF 100%);
 }
 .top-container {
     display: flex;
@@ -66,8 +68,8 @@ body{
     text-align: center;
 }
 .result-info {
-	font-size: 24px;
-	color: #000000;
+	font-size: $font-size-24;
+	color: $black;
 	letter-spacing: 0;
 	text-align: center;
 	line-height: 32px;
@@ -75,7 +77,7 @@ body{
 }
 .result-container h1{
 	font-size: 52px;
-	color: #004A80;
+	color: $blue;
 	letter-spacing: 0;
 	text-align: center;
 	margin: 2rem 0;
@@ -83,22 +85,21 @@ body{
 .search-info span:first-child{
 	font-family: 'Open Sans';
 	font-weight: bold;
-	font-size: 24px;
-	color: #F6BC25;
+	font-size: $font-size-24;
+	color: $yellow;
 	letter-spacing: 0;
 	text-align: center;
 }
 .search-info span:last-child{
-	font-size: 24px;
+	font-size: $font-size-24;
 	color: #FFFFFF;
 	letter-spacing: 0;
 	text-align: center;
 	line-height: 29px;
 }
 h1 {
-	font-family: 'Open Sans';
+	@include fontprop;
 	font-size: 52px;
-	font-weight: bold;
 	color: #FFFFFF;
 	letter-spacing: 0;
 	text-align: center;
@@ -109,7 +110,7 @@ h1 {
 .form-inline input {height: calc(2.5em + .5rem + 3px);}
 .search-msg {
 	font-size: 16px;
-	color: #F6BC25;
+	color: $yellow;
 	letter-spacing: 0;
 }
 .search-msg img {
@@ -120,21 +121,20 @@ h1 {
     margin-bottom: 3px;
 }
 .btn-warning {
-	background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+	@include fontprop;
+	background-image: linear-gradient(225deg, #F2DA56 0%, $yellow 100%);
 	box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
 	border-radius: 6px;
 	border-radius: 6px;
-	font-family: 'Open Sans';
-	font-size: 24px;
-	font-weight: bold;
-	color: #004A80;
+	font-size: $font-size-24;
+	color: $blue;
 	letter-spacing: 1px;
 	text-align: center;
 }
 .lookup-title {
 	font-size: 52px;
 	font-weight: bold;
-	color: #004A80;
+	color: $blue;
 	letter-spacing: 0;
 	text-align: center;
 	line-height: 70px;
@@ -161,19 +161,16 @@ h1 {
 }
 
 .lookup-list .title {
-	font-family: 'Open Sans';
-	font-weight: bold;
+	@include fontprop;
 	font-size: 20px;
-	color: #004A80;
+	color: $blue;
 	letter-spacing: 0;
 	margin-bottom: 0.45rem;
 }
 .lookup-list span.circle {
-    background: #004A80;
+    background: $blue;
     border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    color: #F6BC25;
+    color: $yellow;
     font-size: 22px;
     display: inline-block;
     font-weight: bold;
@@ -190,7 +187,7 @@ h1 {
 }
 .lookup-list .info {
 	font-size: 18px;
-	color: #000000;
+	color: $black;
 	letter-spacing: 0;
 	line-height: 23px;
 }
@@ -216,19 +213,16 @@ h1 {
 }
 
 .card-list .title {
-	font-family: 'Open Sans';
-	font-weight: bold;
+	@include fontprop;
 	font-size: 32px;
-	color: #004A80;
+	color: $blue;
 	letter-spacing: 0;
 	margin-bottom: 0.45rem;
 }
 .card-list span.circle {
-    background: #004A80;
+    background: $blue;
     border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    color: #F6BC25;
+    color: $yellow;
     font-size: 22px;
     display: inline-block;
     font-weight: bold;
@@ -246,7 +240,7 @@ h1 {
 }
 .card-list .info {
 	font-size: 18px;
-	color: #000000;
+	color: $black;
 	letter-spacing: 0;
 	line-height: 23px;
 }
@@ -260,21 +254,20 @@ h1 {
     cursor: pointer;
 }
 .desc-title{
+	@include fontprop;
 	font-size: 22px;
-	font-family: 'Open Sans';
-	font-weight: bold;
-	color: #004A80;
+	color: $blue;
 	letter-spacing: 0;
 }
 .desc {
 	font-size: 18px;
-	color: #000000;
+	color: $black;
 	letter-spacing: 0;
 	line-height: 26px;
 	margin-bottom: 1rem;
 }
 .phone p {
-	color: #004A80;
+	color: $blue;
 	margin: 0;
 }
 .relatives p {margin: 0;}
@@ -296,19 +289,18 @@ h1 {
 }
 .w80{width: 80%;}
 .links {
+	@include fontprop;
 	font-size: 14px;
-	font-family: 'Open Sans';
-	font-weight: bold;
-	color: #004A80;
+	color: $blue;
 	letter-spacing: 0;
 }
-.links a {color: #004A80;}
+.links a {color: $blue;}
 .btn-warning:hover {
     background-image: linear-gradient(225deg, #F2DA56 0%, #F2DA56 100%);
     box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
 }
 
-
+/* media queries */
 @media (max-width: 575px) {
 	.header {height: 480px;}
 	h1, .result-container h1 {font-size: 38px;}
@@ -473,7 +465,7 @@ h1 {
 		line-height: 32px;
 	}
 	.card-summary {
-	    margin-left: 10%;
+	    margin-left: 9.75%;
 	}
 	.card-list .info {
 	    font-size: 18px;
