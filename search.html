@@ -25,12 +25,24 @@
 			    			<span class="user"><img src="images/icn_person@2x.png" alt="" /></span>
 			    		</span>
 			    	</div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<div class="top-section">
+		<div class="container">
+			<div class="row">
+			    <div class="col-12">
 			    	<div class="search-container">
 			    		<h1>Search Any Email Address</h1>
 			    		<p class="search-info"><span>Start Here - </span><span>Look up the owner's name, photos and online profiles. See what you find!</span></p>
-			    		<form name="myForm" class="form-inline" action="result.html" method="get" onsubmit="return validateForm()" required>
-					      <input class="form-control col mr-sm-2" name="email" type="search" placeholder="EMAIL" aria-label="Search" id="serachText" autofocus />
-					      <button class="btn btn-warning col col-lg-2" type="submit" onclick="parsevalues();">GO!</button>
+						<form name="myForm" class="form-inline" action="result.html" method="get" onsubmit="return validateForm()" required>
+							<div class="group">
+								<input class="form-control col mr-sm-2 field" name="email" type="search" placeholder="EMAIL" aria-label="Search" id="serachText" autofocus />
+								<label for="serachText" id="floatingLabel">EMAIL</label>
+								<label id="error-email"></span>
+							</div>
+					      	<button class="btn btn-warning col col-lg-2" type="submit" onclick="parsevalues();">GO!</button>
 					    </form>
 					    <p class="search-msg"><span><img src="images/lock@2x.png" alt="" /></span><span>Enter Any Email Address. They won't be notified.</span></p>
 			    	</div>

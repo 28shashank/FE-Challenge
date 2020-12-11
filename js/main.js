@@ -8,12 +8,13 @@ const params = new URLSearchParams({
 //Add a parameter.
 params.set('email', searchByEmail);
 
+//this will show our spinner
+let loader = `<div class="loader"></div>`;
+document.getElementById('apiresult').innerHTML = loader;
+
 //Load JSON File [API] with AJAX Call using Fetch API
 //This method returns a Promise that we can use to retrieve the response of the request.
-
 let url = `https://cors-anywhere.herokuapp.com/https://ltv-data-api.herokuapp.com/api/v1/records.json?${params.toString()}`;
-
-//console.log(url);
 
 fetch(url, {mode: 'cors'})
 .then ( (apidata) => {
