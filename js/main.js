@@ -9,7 +9,7 @@ const params = new URLSearchParams({
 params.set('email', searchByEmail);
 
 //this will show our spinner
-let loader = `<div class="loader"></div>`;
+let loader = `<div id="loader"></div>`;
 document.getElementById('apiresult').innerHTML = loader;
 
 //Load JSON File [API] with AJAX Call using Fetch API
