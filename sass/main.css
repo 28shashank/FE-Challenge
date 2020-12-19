@@ -152,6 +152,7 @@ h1 {
 .form-inline input {
   height: calc(2.3em + .5rem + 3px);
   font-size: 22px;
+  color: #000;
 }
 
 /* Float Labels */
@@ -171,7 +172,7 @@ h1 {
 label {
   position: absolute;
   top: 14px;
-  left: 12px;
+  left: 15px;
   pointer-events: none;
   color: transparent;
   font-size: 0.9rem;
@@ -281,6 +282,13 @@ label {
 }
 
 /* /loader */
+#apiresult {
+  font-family: 'Open Sans';
+  font-size: 32px;
+  color: #004A80;
+  display: block;
+}
+
 .search-msg {
   font-size: 16px;
   color: #F6BC25;

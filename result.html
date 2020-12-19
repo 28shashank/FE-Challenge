@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Result Page</title>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet' />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="sass/main.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="sass/main.css" />
 
 </head>
+
 <body>
 	<!-- container -->
 	<div class="header">
 		<div class="container">
 			<div class="row">
-			    <div class="col-12">
-			    	<div class="top-container">
-			    		<span class="logo"><a href="search.html"><img src="images/Logo@2x.png" alt="" /></a></span>
-			    		<span>
-			    			<span class="search-path"><img src="images/icn_search@2x.png" alt="" /></span>
-			    			<span class="user"><img src="images/icn_person@2x.png" alt="" /></span>
-			    		</span>
-			    	</div>
-			    </div>
+				<div class="col-12">
+					<div class="top-container">
+						<span class="logo"><a href="search.html"><img src="images/Logo@2x.png" alt="" /></a></span>
+						<span>
+							<span class="search-path"><img src="images/icn_search@2x.png" alt="" /></span>
+							<span class="user"><img src="images/icn_person@2x.png" alt="" /></span>
+						</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="result-container">
 		<div class="container">
 			<div class="row">
-			    <div class="col-12">
-		    		<h1>Result</h1>
-		    		<p class="result-info"><span>Look at the result below to see the details of the person you’re searched for.</span></p>
-			    </div>
+				<div class="col-12">
+					<h1>Result</h1>
+					<p class="result-info"><span>Look at the result below to see the details of the person you’re
+							searched for.</span></p>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-12">
@@ -48,37 +52,44 @@
 	<div class="bottom-section">
 		<div class="container">
 			<div class="row">
-			    <div class="col-12">
-			    	<div class="search-container">
-			    		<h1>Can’t Find The Right Person?</h1>
-			    		<p class="search-info"><span>Try Again - </span><span>Make a new search</span></p>
-			    		<form name="myForm" class="form-inline" action="result.html" method="get" onsubmit="return validateForm()" required>
+				<div class="col-12">
+					<div class="search-container">
+						<h1>Can’t Find The Right Person?</h1>
+						<p class="search-info"><span>Try Again - </span><span>Make a new search</span></p>
+						<form name="myForm" class="form-inline" action="result.html" method="get"
+							onsubmit="return validateForm()" required>
 							<div class="group">
-								<input class="form-control col mr-sm-2 field" name="email" type="search" placeholder="EMAIL" aria-label="Search" id="serachText" autofocus />
+								<input class="form-control col mr-sm-2 field" name="email" type="search"
+									placeholder="EMAIL" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'EMAIL'" aria-label="Search" id="serachText" autofocus />
 								<label for="serachText" id="floatingLabel">EMAIL</label>
-								<label id="error-email"></span>
+								<label id="error-email"></label>
 							</div>
-					      	<button class="btn btn-warning col col-lg-2" type="submit" onclick="parsevalues();">GO!</button>
-					    </form>
-					    <p class="search-msg"><span><img src="images/lock@2x.png" alt="" /></span><span>Enter Any Email Address. They won't be notified.</span></p>
-			    	</div>
-			    </div>
+							<button class="btn btn-warning col col-lg-2" type="submit"
+								onclick="parsevalues();">GO!</button>
+						</form>
+						<p class="search-msg"><span><img src="images/lock@2x.png" alt="" /></span><span>Enter Any Email
+								Address. They won't be notified.</span></p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="footer">
 		<div class="container-fluid">
 			<div class="row">
-			    <div class="col-12">
-			    	<span class="footer-container">
-			    		<span class="w80">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-			    		<span class="links">
-			    			<span><a href="javascript:;">Terms</a></span>
-			    			<span>|</span>
-			    			<span><a href="javascript:;">Privacy</a></span>
-			    		</span>
-			    	</span>
-			    </div>
+				<div class="col-12">
+					<span class="footer-container">
+						<span class="w80">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+						<span class="links">
+							<span><a href="javascript:;">Terms</a></span>
+							<span>|</span>
+							<span><a href="javascript:;">Privacy</a></span>
+						</span>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -92,4 +103,5 @@
 	<!-- /script -->
 
 </body>
+
 </html>
